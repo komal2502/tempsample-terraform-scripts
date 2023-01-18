@@ -44,12 +44,12 @@ variable "rules" {
   description = "List of custom rule definitions (refer to variables file for syntax)."
   default     = []
   type = list(object({
-    name                    = string
-    description             = string
-    direction               = string
-    priority                = number
-    ranges                  = list(string)
-    target_tags             = list(string)
+    name        = string
+    description = string
+    direction   = string
+    priority    = number
+    ranges      = list(string)
+    target_tags = list(string)
     /*source_tags             = list(string)
     source_service_accounts = list(string)
     

@@ -24,16 +24,7 @@ module "subnets" {
   source       = "./module/subnets"
   project_id   = var.project_id
   network_name = var.network_name
-  subnets = [
-    {
-     subnet_name           = "dev-qa-ppd-subnet"
-      subnet_ip             = "10.190.5.0/24"
-      subnet_region         = "us-east4"
-      subnet_private_access = "true"
-      subnet_flow_logs      = "true"
-    }
-  ]
-
+  subnets      = var.subnets
 }
 
 
