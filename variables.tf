@@ -4,7 +4,7 @@ variable "project_id" {
 }
 
 variable "network_name" {
-  description = "The name of the network being created"
+  description = "The name of the network being created vpc"
   type        = string
 }
 
