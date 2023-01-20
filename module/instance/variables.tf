@@ -1,9 +1,9 @@
 variable "instance_name" {
-  type        = string
+  type = string
 }
 
 variable "machine_type" {
-  type        = string
+  type = string
 }
 
 variable "zone" {
@@ -13,19 +13,11 @@ variable "zone" {
 }
 
 variable "tags" {
-  type        = list(string)
+  type = list(string)
 }
 
 variable "image" {
-  type        = string
-}
-
-variable "my_label" {
-  type        = string
-}
-  
-variable "interface" {
-  type        = string
+  type = string
 }
 
 variable "network" {
@@ -35,84 +27,68 @@ variable "network" {
 }
 
 variable "labels" {
-  type        = list(map(string))
-  default     = ""
+  type = map(string)
 }
 
 variable "deletion_protection" {
-  type        = bool
-  default     = false
+  type    = bool
+  default = false
 }
 
 variable "min_cpu_platform" {
-  type        = string
-  default     = ""
-}
-
-variable "enable_display" {
-  type        = bool
-  default     = false
+  type    = string
+  default = ""
 }
 
 variable "allow_stopping_for_update" {
-  type        = bool
-  default     = false
+  type    = bool
+  default = false
 }
 
 variable "auto_delete" {
-  type        = bool
-  default     = false
+  type    = bool
+  default = false
 }
 
 
 variable "device_name" {
-  type        = string
-  default     = ""
+  type    = string
+  default = ""
 }
 
 variable "mode" {
-  type        = string
-  default     = "READ_WRITE"
+  type    = string
+  default = "READ_WRITE"
 }
 
 variable "size" {
-  type        = string
-  default     = ""
+  type    = string
+  default = ""
 }
 
 variable "type" {
-  type        = string
-  default     = ""
+  type    = string
+  default = ""
 }
 
 
-variable "source" {
-  type        = string
-  default     = ""
+variable "source_name" {
+  type    = string
+  default = ""
 }
 
 variable "email" {
-  type        = string
-  default     = ""
+  type    = string
+  default = ""
 }
 
 variable "scopes" {
-  type        = string
-  default     = ""
+  type    = list(string)
+  default = ["cloud-platform"]
 }
 
 
-variable "enable_secure_boot" {
-  type        = bool
-  default     = false
-}
 
-variable "enable_vtpm" {
-  type        = bool
-  default     = true
-}
 
-variable "enable_integrity_monitoring" {
-  type        = bool
-  default     = true
-}
+
+

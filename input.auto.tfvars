@@ -1,7 +1,7 @@
 project_id = "app-cloud-demos"
 
 # VPC - start
-network_name                           = "test-vpc"
+network_name                           = "dev-qa-ppd-vpc"
 routing_mode                           = "REGIONAL"
 auto_create_subnetworks                = true
 description                            = "creating test vpc"
@@ -292,5 +292,28 @@ rules = [
   }
 ]
 
+
+#instance
+instance_name = "hospi-qa-sqldb"
+machine_type  = "custom-6-39936"
+zone          = "us-east4-a"
+labels = {
+  application-name = "database"
+}
+
+tags                      = ["test", "vm"]
+deletion_protection       = true
+min_cpu_platform          = "Intel Broadwell"
+allow_stopping_for_update = true
+network                   = "dev-qa-ppd-vpc"
+auto_delete               = false
+device_name               = "hospi-qa-sql-db"
+mode                      = "READ_WRITE"
+size                      = "3000"
+type                      = "pd-standard"
+image                     = "projects/windows-cloud/global/images/windows-server-2022-dc-v20230111"
+source_name               = "hospi-qa-sqldb-d"
+email                     = "263010608613-compute@developer.gserviceaccount.com"
+scopes                    = ["cloud-platform"]
 
 
